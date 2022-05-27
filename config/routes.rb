@@ -3,4 +3,15 @@ Rails.application.routes.draw do
   # A user can see all the lists
   get 'lists', to: 'lists#index'
 
+  # A user can create a new list
+  get 'lists/new', to: 'lists#new', as: :new_list
+  post 'lists', to: "lists#create"
+
+  # A user can see the details of a given list and its name
+  get 'lists/:id', to: 'lists#show', as: :list
+
+  resources :movies, only: [ :index, :show ]
+
+
+
 end

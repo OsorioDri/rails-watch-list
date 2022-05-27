@@ -1,0 +1,9 @@
+<%# <form action="/restaurants/234/reviews"></form> %>
+<div class="container">
+  <h1>New List</h1>
+  <%= simple_form_for([@list]) do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit %>
+  <% end %>
+  <%= link_to 'Back', lists_path %>
+</div>
