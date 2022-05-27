@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # A user can see the details of a given list and its name
   get 'lists/:id', to: 'lists#show', as: :list
 
-  resources :movies, only: [ :index, :show ]
+  # resources :movies, only: [ :index, :show ]
 
 
 
